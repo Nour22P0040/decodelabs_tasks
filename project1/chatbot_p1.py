@@ -1,7 +1,9 @@
 import os
 from google import genai
 
-client = genai.Client(api_key="AQ.Ab8RN6JNS4Y6qAObzQTZsR6fKRBfLoVyWj9F7ogiPWm0P5rfNg")
+# Use environment variable for API key
+api_key = os.getenv("GOOGLE_API_KEY")
+client = genai.Client(api_key=api_key)
 
 responses = {
     "hello": "Hello! I'm DecoBot. How can I assist you today?",
